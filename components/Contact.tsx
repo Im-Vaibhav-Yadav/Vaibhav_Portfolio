@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -18,6 +19,7 @@ import {
 } from "lucide-react";
 import { useContent } from "@/lib/content-store";
 import Editable from "./edit/Editable";
+import MagneticButton from "./MagneticButton";
 import SectionHeading from "./SectionHeading";
 import { ICON_KEYS } from "@/lib/schema";
 
@@ -45,6 +47,7 @@ const BLANK_SOCIAL = {
 export default function Contact() {
   const { content, editing, update, addItem, removeItem } = useContent();
   const { profile, socials } = content;
+  const [anyHovered, setAnyHovered] = useState(false);
 
   return (
     <section id="contact" className="relative px-6 py-28 md:px-10">
@@ -55,26 +58,48 @@ export default function Contact() {
           titlePath="headings.contact.title"
         />
 
-        <motion.a
-          href={editing ? undefined : `mailto:${profile.email}`}
-          data-cursor-hover
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
-          className="group mb-16 flex flex-col items-start gap-4 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between"
-        >
-          <Editable
-            as="span"
-            path="profile.email"
-            className="block break-all font-display text-[9vw] italic leading-none tracking-tight text-paper transition-colors group-hover:text-acid sm:text-6xl md:text-7xl"
-          />
-          <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-line text-paper transition-all group-hover:-translate-y-1 group-hover:rotate-45 group-hover:border-acid group-hover:text-acid">
-            <ArrowUpRight size={22} />
-          </span>
-        </motion.a>
+        {editing ? (
+          <div className="group mb-16 flex flex-col items-start gap-4 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between">
+            <Editable
+              as="span"
+              path="profile.email"
+              className="block break-all font-display text-[9vw] italic leading-none tracking-tight text-paper sm:text-6xl md:text-7xl"
+            />
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-line text-paper">
+              <ArrowUpRight size={22} />
+            </span>
+          </div>
+        ) : (
+          <MagneticButton
+            href={`mailto:${profile.email}`}
+            cursorLabel="OPEN"
+            className="group mb-16 w-full flex-col items-start gap-4 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between"
+          >
+            <span className="block break-all font-display text-[9vw] italic leading-none tracking-tight text-paper transition-colors group-hover:text-acid sm:text-6xl md:text-7xl">
+              {profile.email}
+            </span>
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-line text-paper transition-all group-hover:rotate-45 group-hover:border-acid group-hover:text-acid">
+              <ArrowUpRight size={22} />
+            </span>
+          </MagneticButton>
+        )}
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="relative mb-3 h-px w-full overflow-hidden bg-line">
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            animate={{ opacity: anyHovered ? 1 : 0.5 }}
+            className="absolute inset-0 origin-left bg-acid"
+          />
+        </div>
+
+        <div
+          onMouseEnter={() => setAnyHovered(true)}
+          onMouseLeave={() => setAnyHovered(false)}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <ContactCard
             icon={<Phone size={16} />}
             label="Phone"
@@ -97,7 +122,7 @@ export default function Contact() {
                 {editing && (
                   <button
                     onClick={() => removeItem("socials", i)}
-                    className="absolute right-1.5 top-1.5 text-haze opacity-60 hover:text-amber"
+                    className="absolute right-1.5 top-1.5 text-haze opacity-60 hover:text-gold"
                     aria-label="Remove link"
                   >
                     <Trash2 size={12} />
@@ -144,6 +169,7 @@ export default function Contact() {
                     target={s.url.startsWith("http") ? "_blank" : undefined}
                     rel="noreferrer"
                     data-cursor-hover
+                    data-cursor-label="OPEN"
                     className="flex items-center justify-between gap-3"
                   >
                     <div>
@@ -224,6 +250,7 @@ function ContactCard({
     <a
       href={href}
       data-cursor-hover
+      data-cursor-label="OPEN"
       className="corner-frame group border border-line p-6 transition-colors hover:border-acid/40"
     >
       {inner}

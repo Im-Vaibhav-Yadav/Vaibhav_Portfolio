@@ -12,8 +12,12 @@ export default function Footer() {
         <span>
           &copy; {new Date().getFullYear()} {content.profile.name}
         </span>
-        <span className="hidden sm:block">
-          Built with Next.js &middot; Designed &amp; engineered end-to-end
+        <span className="hidden items-center gap-2 sm:flex">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-acid opacity-50" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-acid" />
+          </span>
+          System / Online
         </span>
         <a
           href="#top"

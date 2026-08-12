@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin } from "lucide-react";
 import { useContent } from "@/lib/content-store";
 import Editable from "./edit/Editable";
+import MagneticButton from "./MagneticButton";
+import { DOMAIN_BG, DOMAIN_TEXT, type Domain } from "@/lib/domain-colors";
 
 const container = {
   hidden: {},
@@ -17,11 +20,19 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
+const SYSTEM_ROWS: { label: string; domain: Domain; keywords: string }[] = [
+  { label: "Product", domain: "product", keywords: "SaaS · implementation · UAT" },
+  { label: "Data", domain: "data", keywords: "Power BI · SQL · DAX" },
+  { label: "AI", domain: "ai", keywords: "LLMs · agents · MCP" },
+  { label: "Automation", domain: "systems", keywords: "workflows · pipelines" },
+];
+
 export default function Hero() {
   const { content, editing } = useContent();
   const { profile, stats } = content;
   const [first, ...restWords] = profile.name.split(" ");
   const rest = restWords.join(" ");
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
 
   return (
     <section
@@ -32,78 +43,126 @@ export default function Hero() {
         initial="hidden"
         animate="show"
         variants={container}
-        className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center"
+        className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-12 lg:grid-cols-[1.5fr_auto]"
       >
-        <motion.div
-          variants={item}
-          className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-haze"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acid opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-acid" />
-          </span>
-          Open to select engagements
-          <span className="hidden items-center gap-1 sm:flex">
-            <MapPin size={12} /> <Editable path="profile.location" />
-          </span>
-        </motion.div>
-
-        {editing ? (
-          <motion.div variants={item}>
-            <Editable
-              as="h1"
-              path="profile.name"
-              className="block font-display text-6xl font-light italic leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-8xl"
-            />
-          </motion.div>
-        ) : (
-          <motion.h1
+        <div>
+          <motion.div
             variants={item}
-            className="font-display text-[13vw] font-light italic leading-[0.92] tracking-tight text-paper sm:text-[9vw] md:text-[7.2vw] lg:text-[6.4vw]"
+            className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-haze"
           >
-            {first}
-            <br />
-            <span className="font-semibold not-italic">{rest}</span>
-          </motion.h1>
-        )}
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-acid opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-acid" />
+            </span>
+            Open to select engagements
+            <span className="hidden items-center gap-1 sm:flex">
+              <MapPin size={12} /> <Editable path="profile.location" />
+            </span>
+          </motion.div>
+
+          {editing ? (
+            <motion.div variants={item}>
+              <Editable
+                as="h1"
+                path="profile.name"
+                className="block font-display text-6xl italic leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-8xl"
+              />
+            </motion.div>
+          ) : (
+            <motion.h1
+              variants={item}
+              className="font-display text-[15vw] italic leading-[0.9] tracking-tight text-paper sm:text-[10vw] md:text-[8vw] lg:text-[6.8vw]"
+            >
+              {first}
+              <br />
+              <span className="not-italic tracking-tight">{rest}</span>
+            </motion.h1>
+          )}
+
+          <motion.div
+            variants={item}
+            className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
+          >
+            <Editable
+              as="p"
+              path="profile.tagline"
+              multiline
+              className="block max-w-xl font-body text-lg leading-relaxed text-haze md:text-xl"
+            />
+            <div className="flex flex-wrap gap-3">
+              <MagneticButton
+                href="#work"
+                cursorLabel="VIEW"
+                className="border border-acid bg-acid px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink"
+              >
+                View the work
+              </MagneticButton>
+              <MagneticButton
+                href="#contact"
+                className="border border-line px-6 py-3 font-mono text-xs uppercase tracking-widest text-paper transition-colors hover:border-acid hover:text-acid"
+              >
+                Get in touch
+              </MagneticButton>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="mt-6 flex flex-wrap items-center gap-2 font-mono text-sm text-acid"
+          >
+            <span className="text-haze">&gt;</span>
+            <Editable path="profile.role" />
+            <span className="text-haze">&middot;</span>
+            <Editable path="profile.roleSecondary" />
+            <span className="h-4 w-[2px] motion-safe:animate-blink bg-acid" />
+          </motion.div>
+        </div>
 
         <motion.div
           variants={item}
-          className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
+          className="hidden w-64 border border-line bg-panel/40 p-5 backdrop-blur-sm lg:block"
         >
-          <Editable
-            as="p"
-            path="profile.tagline"
-            multiline
-            className="block max-w-xl font-body text-lg leading-relaxed text-haze md:text-xl"
-          />
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#work"
-              data-cursor-hover
-              className="border border-acid bg-acid px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink transition-transform hover:-translate-y-0.5"
-            >
-              View the work
-            </a>
-            <a
-              href="#contact"
-              data-cursor-hover
-              className="border border-line px-6 py-3 font-mono text-xs uppercase tracking-widest text-paper transition-colors hover:border-acid hover:text-acid"
-            >
-              Get in touch
-            </a>
+          <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-haze">
+            <span>System</span>
+            <span className="flex items-center gap-1.5 text-acid">
+              <span className="h-1.5 w-1.5 rounded-full bg-acid motion-safe:animate-pulseDot" />
+              Active
+            </span>
           </div>
-        </motion.div>
-
-        <motion.div
-          variants={item}
-          className="mt-6 flex flex-wrap items-center gap-2 font-mono text-sm text-acid"
-        >
-          <span className="text-haze">&gt;</span>
-          <Editable path="profile.role" />
-          <span className="text-haze">&middot;</span>
-          <Editable path="profile.roleSecondary" />
-          <span className="h-4 w-[2px] animate-blink bg-acid" />
+          <div className="space-y-3">
+            {SYSTEM_ROWS.map((row, i) => (
+              <div
+                key={row.label}
+                onMouseEnter={() => setHoveredRow(i)}
+                onMouseLeave={() => setHoveredRow(null)}
+                className="group cursor-default border-l-2 border-line pl-3 py-1 transition-colors"
+                style={
+                  hoveredRow === i
+                    ? { borderColor: "var(--domain-" + row.domain + ")" }
+                    : undefined
+                }
+              >
+                <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-paper">
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full ${DOMAIN_BG[row.domain]} motion-safe:animate-pulseDot`}
+                    style={{ animationDelay: `${i * 0.3}s` }}
+                  />
+                  {row.label}
+                </div>
+                <motion.p
+                  initial={false}
+                  animate={{
+                    opacity: hoveredRow === i ? 1 : 0,
+                    height: hoveredRow === i ? "auto" : 0,
+                  }}
+                  transition={{ duration: 0.25 }}
+                  className={`overflow-hidden pl-3.5 font-mono text-[10px] ${DOMAIN_TEXT[row.domain]}`}
+                >
+                  {row.keywords}
+                </motion.p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </motion.div>
 

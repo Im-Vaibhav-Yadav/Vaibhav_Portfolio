@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, JetBrains_Mono, Work_Sans } from "next/font/google";
+import { Instrument_Serif, JetBrains_Mono, Work_Sans } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 
-const fraunces = Fraunces({
+const displayFont = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-display",
   style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  weight: "400",
 });
 
 const jbmono = JetBrains_Mono({
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fraunces.variable} ${jbmono.variable} ${worksans.variable} font-body bg-ink text-paper antialiased`}
+        className={`${displayFont.variable} ${jbmono.variable} ${worksans.variable} font-body bg-ink text-paper antialiased`}
       >
         <CustomCursor />
         {children}

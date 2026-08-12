@@ -15,6 +15,11 @@ export interface Stat {
   label: string;
 }
 
+export interface ExperienceTag {
+  label: string;
+  domain: string;
+}
+
 export interface ExperienceItem {
   company: string;
   role: string;
@@ -22,6 +27,7 @@ export interface ExperienceItem {
   location: string;
   tag: string;
   points: string[];
+  tags: ExperienceTag[];
 }
 
 export interface Education {
@@ -33,6 +39,7 @@ export interface Education {
 export interface SkillGroup {
   id: string;
   title: string;
+  domain: string;
   items: string[];
 }
 
@@ -41,6 +48,8 @@ export interface Project {
   year: string;
   name: string;
   category: string;
+  domain: string;
+  buildType: string;
   description: string;
   stack: string[];
   highlights: string[];
@@ -50,6 +59,7 @@ export interface Project {
 export interface Certification {
   name: string;
   issuer: string;
+  url: string;
 }
 
 export interface NavLink {
@@ -103,6 +113,9 @@ export interface SiteContent {
   posts: Post[];
   headings: Headings;
 }
+
+/** How a project should be labeled — never presented as more than it is. */
+export const BUILD_TYPE_KEYS = ["client", "independent", "experimental"] as const;
 
 /** Valid icon keys for SocialLink.icon — mapped to lucide-react icons. */
 export const ICON_KEYS = [
