@@ -47,46 +47,43 @@ export default function Hero() {
         className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-12 lg:grid-cols-[1.5fr_auto]"
       >
         <div>
-          <motion.div variants={item} className="mb-6">
+          <motion.div
+            variants={item}
+            className="mb-8 flex items-center gap-5 md:gap-7"
+          >
             <EditableImage
               path="profile.photo"
               aspect="aspect-square"
-              className="h-24 w-24 md:h-28 md:w-28"
+              className="h-20 w-20 shrink-0 md:h-28 md:w-28"
               alwaysShow
               emptyLabel="Add photo"
             />
-          </motion.div>
 
-          <motion.div
-            variants={item}
-            className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-haze"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-acid opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-acid" />
-            </span>
-            Open to select engagements
-            <span className="hidden items-center gap-1 sm:flex">
-              <MapPin size={12} /> <Editable path="profile.location" />
-            </span>
-          </motion.div>
+            <div className="min-w-0">
+              <div className="mb-2 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-haze">
+                <span className="relative flex h-2 w-2 shrink-0">
+                  <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-acid opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-acid" />
+                </span>
+                <span className="truncate">Open to select engagements</span>
+                <span className="hidden shrink-0 items-center gap-1 sm:flex">
+                  <MapPin size={12} /> <Editable path="profile.location" />
+                </span>
+              </div>
 
-          {editing ? (
-            <motion.div variants={item}>
-              <Editable
-                as="h1"
-                path="profile.name"
-                className="block font-display text-6xl italic leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-8xl"
-              />
-            </motion.div>
-          ) : (
-            <motion.h1
-              variants={item}
-              className="whitespace-nowrap font-display text-[9vw] italic leading-[0.9] tracking-tight text-paper sm:text-[6vw] md:text-[4.6vw] lg:text-[3.8vw]"
-            >
-              {first} <span className="not-italic tracking-tight">{rest}</span>
-            </motion.h1>
-          )}
+              {editing ? (
+                <Editable
+                  as="h1"
+                  path="profile.name"
+                  className="block font-display text-4xl italic leading-[0.95] tracking-tight text-paper sm:text-5xl md:text-6xl"
+                />
+              ) : (
+                <h1 className="whitespace-nowrap font-display text-[7vw] italic leading-[0.9] tracking-tight text-paper sm:text-[4.6vw] md:text-[3.6vw] lg:text-[2.9vw]">
+                  {first} <span className="not-italic tracking-tight">{rest}</span>
+                </h1>
+              )}
+            </div>
+          </motion.div>
 
           <motion.div
             variants={item}

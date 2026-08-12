@@ -9,28 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // "ink" = page background (light), "paper" = primary text (dark) —
-        // names kept from the dark-theme build so component classNames
-        // didn't need touching; only the hex values flipped.
-        ink: "#f5f6f8",
-        panel: "#ffffff",
-        paper: "#0b0d10",
-        haze: "#5b6169",
-        muted: "#9aa0a6",
-        line: "rgba(11,13,16,0.10)",
-        hairline: "rgba(11,13,16,0.04)",
-        // Primary brand accent — violet, used pervasively (CTAs, cursor,
-        // links, hover states) in place of the old lime.
-        acid: "#7c3aed",
+        // "ink" = page background, "paper" = primary text — names kept
+        // stable across theme passes so component classNames never need
+        // touching; only the hex values change here.
+        ink: "#0a0f24",
+        panel: "#10173a",
+        paper: "#edeffa",
+        haze: "#8891b0",
+        muted: "#5c6480",
+        line: "rgba(237,239,250,0.10)",
+        hairline: "rgba(237,239,250,0.04)",
+        // Primary brand accent — warm gold against deep navy, used
+        // pervasively (CTAs, cursor, links, hover states).
+        acid: "#ffb020",
         // Domain accents — one per capability area, used consistently as
         // tags/dots/borders rather than backgrounds, so four hues stay
         // legible instead of noisy.
-        champagne: "#ea580c",
-        gold: "#db2777",
-        electric: "#0ea5e9",
+        champagne: "#22d3ee",
+        gold: "#fb7185",
+        electric: "#a78bfa",
         // Destructive/remove affordance in edit mode — deliberately not
         // one of the brand/domain colors.
-        amber: "#dc2626",
+        amber: "#ef4444",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
@@ -38,8 +38,8 @@ const config: Config = {
         body: ["var(--font-worksans)", "sans-serif"],
       },
       backgroundImage: {
-        grid: "linear-gradient(to right, rgba(11,13,16,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(11,13,16,0.05) 1px, transparent 1px)",
-        "grid-bright": "linear-gradient(to right, rgba(124,58,237,0.18) 1px, transparent 1px), linear-gradient(to bottom, rgba(124,58,237,0.18) 1px, transparent 1px)",
+        grid: "linear-gradient(to right, rgba(237,239,250,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(237,239,250,0.05) 1px, transparent 1px)",
+        "grid-bright": "linear-gradient(to right, rgba(255,176,32,0.22) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,176,32,0.22) 1px, transparent 1px)",
       },
       backgroundSize: {
         grid: "48px 48px",
