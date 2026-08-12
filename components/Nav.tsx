@@ -1,17 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Upload, Loader2 } from "lucide-react";
 import { useContent } from "@/lib/content-store";
 import Editable from "./edit/Editable";
 
 export default function Nav() {
-  const { content } = useContent();
+  const { content, editing, update, uploadImage } = useContent();
   const { navLinks, profile } = content;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState(navLinks[0]?.href ?? "");
+  const [uploadingResume, setUploadingResume] = useState(false);
+  const resumeInputRef = useRef<HTMLInputElement>(null);
+
+  async function handleResumeFile(file: File | null) {
+    if (!file) return;
+    setUploadingResume(true);
+    try {
+      const url = await uploadImage(file);
+      update("profile.resumeUrl", url);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setUploadingResume(false);
+    }
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -56,7 +71,7 @@ export default function Nav() {
             className="group flex items-center gap-3"
             data-cursor-hover
           >
-            <span className="flex h-9 w-9 items-center justify-center border border-acid/40 font-mono text-xs text-acid transition-colors group-hover:bg-acid group-hover:text-ink">
+            <span className="edge-shadow flex h-9 w-9 items-center justify-center border border-acid/40 font-mono text-xs text-acid transition-colors group-hover:bg-acid group-hover:text-ink">
               {profile.initials}
             </span>
             <span className="hidden font-mono text-xs uppercase tracking-[0.25em] text-haze sm:block">
@@ -96,9 +111,9 @@ export default function Nav() {
             })}
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <a
-              href="/resume.pdf"
+              href={profile.resumeUrl}
               download
               data-cursor-hover
               data-cursor-label="OPEN"
@@ -106,6 +121,33 @@ export default function Nav() {
             >
               R&eacute;sum&eacute; <ArrowUpRight size={13} />
             </a>
+            {editing && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => resumeInputRef.current?.click()}
+                  data-cursor-hover
+                  className="hidden items-center gap-1.5 border border-dashed border-acid/50 px-2.5 py-2 font-mono text-[10px] uppercase tracking-widest text-acid md:flex"
+                  title="Replace résumé PDF"
+                >
+                  {uploadingResume ? (
+                    <Loader2 size={12} className="animate-spin" />
+                  ) : (
+                    <Upload size={12} />
+                  )}
+                  Replace
+                </button>
+                <input
+                  ref={resumeInputRef}
+                  type="file"
+                  accept="application/pdf"
+                  className="hidden"
+                  onChange={(e) =>
+                    handleResumeFile(e.target.files?.[0] ?? null)
+                  }
+                />
+              </>
+            )}
             <button
               onClick={() => setOpen(true)}
               className="flex h-9 w-9 items-center justify-center border border-line text-paper md:hidden"
@@ -152,7 +194,7 @@ export default function Nav() {
                 </motion.a>
               ))}
               <a
-                href="/resume.pdf"
+                href={profile.resumeUrl}
                 download
                 className="mt-6 flex items-center gap-2 border border-acid px-5 py-3 font-mono text-xs uppercase tracking-widest text-acid"
               >

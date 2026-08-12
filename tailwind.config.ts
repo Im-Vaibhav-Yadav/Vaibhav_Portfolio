@@ -17,8 +17,10 @@ const config: Config = {
         paper: "#221c14",
         haze: "#7c7059",
         muted: "#a79876",
-        line: "rgba(34,28,20,0.12)",
-        hairline: "rgba(34,28,20,0.05)",
+        // Bumped up from the earlier soft-editorial pass — sharper,
+        // more defined structural lines for a sturdier feel.
+        line: "rgba(34,28,20,0.22)",
+        hairline: "rgba(34,28,20,0.09)",
         // Primary brand accent — terracotta against warm beige, used
         // pervasively (CTAs, cursor, links, hover states).
         acid: "#c1502e",
@@ -37,13 +39,6 @@ const config: Config = {
         mono: ["var(--font-jbmono)", "monospace"],
         body: ["var(--font-worksans)", "sans-serif"],
       },
-      backgroundImage: {
-        grid: "linear-gradient(to right, rgba(34,28,20,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(34,28,20,0.07) 1px, transparent 1px)",
-        "grid-bright": "linear-gradient(to right, rgba(193,80,46,0.28) 1px, transparent 1px), linear-gradient(to bottom, rgba(193,80,46,0.28) 1px, transparent 1px)",
-      },
-      backgroundSize: {
-        grid: "48px 48px",
-      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
@@ -53,15 +48,6 @@ const config: Config = {
           "0%, 49%": { opacity: "1" },
           "50%, 100%": { opacity: "0" },
         },
-        drift: {
-          "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(4%, 6%) scale(1.08)" },
-          "66%": { transform: "translate(-3%, -4%) scale(0.96)" },
-        },
-        driftSlow: {
-          "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-          "50%": { transform: "translate(-6%, 5%) scale(1.1)" },
-        },
         pulseDot: {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.4", transform: "scale(0.85)" },
@@ -70,8 +56,6 @@ const config: Config = {
       animation: {
         marquee: "marquee 28s linear infinite",
         blink: "blink 1.1s step-end infinite",
-        drift: "drift 22s ease-in-out infinite",
-        driftSlow: "driftSlow 30s ease-in-out infinite",
         pulseDot: "pulseDot 2.4s ease-in-out infinite",
       },
     },

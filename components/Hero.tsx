@@ -99,7 +99,7 @@ export default function Hero() {
               <MagneticButton
                 href="#work"
                 cursorLabel="VIEW"
-                className="border border-acid bg-acid px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink"
+                className="edge-shadow border border-acid bg-acid px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink"
               >
                 View the work
               </MagneticButton>

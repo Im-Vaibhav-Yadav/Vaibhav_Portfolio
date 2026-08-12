@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --mx: 50%;
-  --my: 40%;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -84,58 +79,6 @@ body {
   -webkit-text-stroke: 1px rgba(34, 28, 20, 0.28);
 }
 
-.bg-grid {
-  background-image: linear-gradient(
-      to right,
-      rgba(34, 28, 20, 0.07) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(34, 28, 20, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-/* Bright terracotta grid layer, revealed only in a soft radius around the
-   cursor via a radial-gradient mask bound to --mx/--my. Skipped
-   entirely on touch devices and under reduced-motion. */
-.bg-grid-interactive {
-  background-image: linear-gradient(
-      to right,
-      rgba(193, 80, 46, 0.55) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(193, 80, 46, 0.55) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(
-    260px 260px at var(--mx) var(--my),
-    black 0%,
-    transparent 70%
-  );
-  mask-image: radial-gradient(
-    260px 260px at var(--mx) var(--my),
-    black 0%,
-    transparent 70%
-  );
-  transition: opacity 0.3s ease;
-}
-
-@media (prefers-reduced-motion: reduce), (hover: none) {
-  .bg-grid-interactive,
-  .cursor-glow {
-    display: none;
-  }
-}
-
-.cursor-glow {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    480px 480px at var(--mx) var(--my),
-    rgba(193, 80, 46, 0.09),
-    transparent 70%
-  );
-  transition: opacity 0.4s ease;
-}
-
 .mask-fade-x {
   -webkit-mask-image: linear-gradient(
     to right,
@@ -153,34 +96,53 @@ body {
   );
 }
 
+/* Sturdy, always-visible corner brackets that snap to full strength
+   and pick up a hard (non-blurred) offset shadow on hover — a
+   deliberately blocky, structural touch rather than a soft glow. */
 .corner-frame {
   position: relative;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .corner-frame::before,
 .corner-frame::after {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-color: #c1502e;
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
 }
 .corner-frame::before {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid;
-  border-left: 2px solid;
+  top: -2px;
+  left: -2px;
+  border-top: 3px solid;
+  border-left: 3px solid;
 }
 .corner-frame::after {
-  bottom: -1px;
-  right: -1px;
-  border-bottom: 2px solid;
-  border-right: 2px solid;
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
 }
 .corner-frame:hover::before,
 .corner-frame:hover::after {
   opacity: 1;
+}
+.corner-frame:hover {
+  box-shadow: 5px 5px 0 0 rgba(34, 28, 20, 0.9);
+  transform: translate(-2px, -2px);
+}
+
+/* Hard, unblurred offset shadow — the "sturdy" signature applied to
+   primary CTAs and key anchors instead of a soft drop shadow. */
+.edge-shadow {
+  box-shadow: 4px 4px 0 0 #221c14;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.edge-shadow:hover {
+  box-shadow: 6px 6px 0 0 #221c14;
+  transform: translate(-2px, -2px);
 }
 
 .grain-card {

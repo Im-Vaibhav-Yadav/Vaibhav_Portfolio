@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   initials: string;
   photo: string;
+  resumeUrl: string;
   role: string;
   roleSecondary: string;
   location: string;
