@@ -12,25 +12,25 @@ const config: Config = {
         // "ink" = page background, "paper" = primary text — names kept
         // stable across theme passes so component classNames never need
         // touching; only the hex values change here.
-        ink: "#0a0f24",
-        panel: "#10173a",
-        paper: "#edeffa",
-        haze: "#8891b0",
-        muted: "#5c6480",
-        line: "rgba(237,239,250,0.10)",
-        hairline: "rgba(237,239,250,0.04)",
-        // Primary brand accent — warm gold against deep navy, used
+        ink: "#efe6d6",
+        panel: "#f8f3e8",
+        paper: "#221c14",
+        haze: "#7c7059",
+        muted: "#a79876",
+        line: "rgba(34,28,20,0.12)",
+        hairline: "rgba(34,28,20,0.05)",
+        // Primary brand accent — terracotta against warm beige, used
         // pervasively (CTAs, cursor, links, hover states).
-        acid: "#ffb020",
+        acid: "#c1502e",
         // Domain accents — one per capability area, used consistently as
         // tags/dots/borders rather than backgrounds, so four hues stay
         // legible instead of noisy.
-        champagne: "#22d3ee",
-        gold: "#fb7185",
-        electric: "#a78bfa",
+        champagne: "#0f766e",
+        gold: "#b45309",
+        electric: "#4338ca",
         // Destructive/remove affordance in edit mode — deliberately not
         // one of the brand/domain colors.
-        amber: "#ef4444",
+        amber: "#dc2626",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
@@ -38,8 +38,8 @@ const config: Config = {
         body: ["var(--font-worksans)", "sans-serif"],
       },
       backgroundImage: {
-        grid: "linear-gradient(to right, rgba(237,239,250,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(237,239,250,0.05) 1px, transparent 1px)",
-        "grid-bright": "linear-gradient(to right, rgba(255,176,32,0.22) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,176,32,0.22) 1px, transparent 1px)",
+        grid: "linear-gradient(to right, rgba(34,28,20,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(34,28,20,0.07) 1px, transparent 1px)",
+        "grid-bright": "linear-gradient(to right, rgba(193,80,46,0.28) 1px, transparent 1px), linear-gradient(to bottom, rgba(193,80,46,0.28) 1px, transparent 1px)",
       },
       backgroundSize: {
         grid: "48px 48px",
