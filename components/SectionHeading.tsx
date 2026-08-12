@@ -21,11 +21,14 @@ export default function SectionHeading({
       className="mb-12 flex items-end justify-between gap-6 border-b border-line pb-6"
     >
       <div>
-        <Editable
-          as="p"
-          path={kickerPath}
-          className="mb-3 block font-mono text-xs uppercase tracking-[0.3em] text-acid"
-        />
+        <span className="mb-3 inline-flex items-center gap-2 border border-acid/40 bg-acid/[0.06] px-2.5 py-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-acid" />
+          <Editable
+            as="span"
+            path={kickerPath}
+            className="block font-mono text-[11px] uppercase tracking-[0.25em] text-acid"
+          />
+        </span>
         <Editable
           as="h2"
           path={titlePath}

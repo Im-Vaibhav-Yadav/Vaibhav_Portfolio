@@ -47,15 +47,15 @@ export default function Hero() {
         className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-12 lg:grid-cols-[1.5fr_auto]"
       >
         <div>
-          {(profile.photo || editing) && (
-            <motion.div variants={item} className="mb-6">
-              <EditableImage
-                path="profile.photo"
-                aspect="aspect-square"
-                className="h-24 w-24 md:h-28 md:w-28"
-              />
-            </motion.div>
-          )}
+          <motion.div variants={item} className="mb-6">
+            <EditableImage
+              path="profile.photo"
+              aspect="aspect-square"
+              className="h-24 w-24 md:h-28 md:w-28"
+              alwaysShow
+              emptyLabel="Add photo"
+            />
+          </motion.div>
 
           <motion.div
             variants={item}
@@ -82,11 +82,9 @@ export default function Hero() {
           ) : (
             <motion.h1
               variants={item}
-              className="font-display text-[15vw] italic leading-[0.9] tracking-tight text-paper sm:text-[10vw] md:text-[8vw] lg:text-[6.8vw]"
+              className="whitespace-nowrap font-display text-[9vw] italic leading-[0.9] tracking-tight text-paper sm:text-[6vw] md:text-[4.6vw] lg:text-[3.8vw]"
             >
-              {first}
-              <br />
-              <span className="not-italic tracking-tight">{rest}</span>
+              {first} <span className="not-italic tracking-tight">{rest}</span>
             </motion.h1>
           )}
 

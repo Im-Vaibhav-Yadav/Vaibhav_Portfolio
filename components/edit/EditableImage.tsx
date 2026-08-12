@@ -8,12 +8,17 @@ export default function EditableImage({
   path,
   className,
   aspect = "aspect-[16/10]",
+  alwaysShow = false,
+  emptyLabel = "No image yet",
 }: {
   path: string;
   className?: string;
   aspect?: string;
+  alwaysShow?: boolean;
+  emptyLabel?: string;
 }) {
-  const { content, editing, update, uploadImage } = useContent();
+  const { content, editing, canEdit, toggleEditing, update, uploadImage } =
+    useContent();
   const value = (getAtPath(content, path) ?? "") as string;
   const inputRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
@@ -32,7 +37,22 @@ export default function EditableImage({
   }
 
   if (!editing) {
-    if (!value) return null;
+    if (!value) {
+      if (!alwaysShow) return null;
+      return (
+        <button
+          type="button"
+          onClick={() => canEdit && toggleEditing()}
+          data-cursor-hover={canEdit || undefined}
+          className={`corner-frame group flex flex-col items-center justify-center gap-2 border border-dashed border-line bg-panel/60 text-left ${aspect} ${className ?? ""}`}
+        >
+          <ImagePlus size={20} className="text-haze" />
+          <span className="px-2 text-center font-mono text-[10px] uppercase tracking-widest text-haze">
+            {canEdit ? emptyLabel : "Photo coming soon"}
+          </span>
+        </button>
+      );
+    }
     return (
       <div
         className={`corner-frame group relative overflow-hidden border border-line ${aspect} ${className ?? ""}`}
@@ -58,7 +78,7 @@ export default function EditableImage({
         <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-panel/60">
           <ImagePlus size={20} className="text-haze" />
           <span className="font-mono text-[10px] uppercase tracking-widest text-haze">
-            No image yet
+            {emptyLabel}
           </span>
         </div>
       )}

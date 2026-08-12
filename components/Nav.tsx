@@ -60,7 +60,7 @@ export default function Nav() {
               {profile.initials}
             </span>
             <span className="hidden font-mono text-xs uppercase tracking-[0.25em] text-haze sm:block">
-              Yadav / Systems
+              {profile.name}
             </span>
           </a>
 
