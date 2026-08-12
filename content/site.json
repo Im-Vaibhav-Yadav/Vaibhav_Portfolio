@@ -5,7 +5,7 @@
     "role": "Associate Product Implementation Consultant",
     "roleSecondary": "SaaS Implementation · BI & Analytics · AI Agents",
     "location": "Gurugram, Haryana, India",
-    "email": "vaibhav.yadav.ee.2021@miet.ac.in",
+    "email": "vaibhav518yadav@gmail.com",
     "phone": "+91 76680 24141",
     "tagline": "I sit at the intersection of business process, data, and AI — implementing enterprise SaaS platforms, building BI dashboards that drive real decisions, and shipping AI agents that automate the rest.",
     "bio": [
@@ -16,10 +16,22 @@
     ]
   },
   "stats": [
-    { "value": "1.1+", "label": "Years in enterprise SaaS implementation" },
-    { "value": "2", "label": "Platforms implemented — Keka HRMS & Happay" },
-    { "value": "6+", "label": "Certifications across AI, cloud & data" },
-    { "value": "BI / SQL / AI Agents", "label": "Daily stack" }
+    {
+      "value": "1.1+",
+      "label": "Years in enterprise SaaS implementation"
+    },
+    {
+      "value": "2",
+      "label": "Platforms implemented — Keka HRMS & Happay"
+    },
+    {
+      "value": "6+",
+      "label": "Certifications across AI, cloud & data"
+    },
+    {
+      "value": "BI / SQL / AI Agents",
+      "label": "Daily stack"
+    }
   ],
   "experience": [
     {
@@ -75,7 +87,14 @@
     {
       "id": "02",
       "title": "Data Analytics & BI",
-      "items": ["Power BI", "SQL", "DAX", "Power Query (M)", "Excel", "Python"]
+      "items": [
+        "Power BI",
+        "SQL",
+        "DAX",
+        "Power Query (M)",
+        "Excel",
+        "Python"
+      ]
     },
     {
       "id": "03",
@@ -92,12 +111,20 @@
     {
       "id": "04",
       "title": "Cloud & Platforms",
-      "items": ["AWS Cloud Foundations", "Google BigQuery", "Vertex AI"]
+      "items": [
+        "AWS Cloud Foundations",
+        "Google BigQuery",
+        "Vertex AI"
+      ]
     },
     {
       "id": "05",
       "title": "Engineering Foundations",
-      "items": ["SCADA Systems", "Autodesk Suite", "Electrical Systems Design"]
+      "items": [
+        "SCADA Systems",
+        "Autodesk Suite",
+        "Electrical Systems Design"
+      ]
     }
   ],
   "skillTicker": [
@@ -117,11 +144,17 @@
   "projects": [
     {
       "id": "01",
-      "year": "2025",
+      "year": "2026",
       "name": "7H Hospitality — Executive BI Suite",
       "category": "Power BI · Business Intelligence",
       "description": "An executive Power BI dashboard built for 7H Hospitality in Perth, Scotland — integrating Microsoft Business Central data into a single model covering financial and operational performance across the portfolio.",
-      "stack": ["Power BI", "DAX", "Power Query (M)", "SQL", "Business Central"],
+      "stack": [
+        "Power BI",
+        "DAX",
+        "Power Query (M)",
+        "SQL",
+        "Business Central"
+      ],
       "highlights": [
         "KPI coverage across Revenue, Occupancy, ADR & RevPAR",
         "P&L and Budget vs. Actual reporting built for finance stakeholders",
@@ -135,7 +168,14 @@
       "name": "Multi-Tenant HRMS Platform",
       "category": "Independent Build · Backend Architecture",
       "description": "A production-grade HR Management System built from scratch as an independent engineering exercise, separate from client implementation work — multi-tenant by design, with a generic RBAC engine, a configurable policy engine, and a reusable approval-workflow engine driving leave, onboarding and offboarding.",
-      "stack": ["FastAPI", "SQLAlchemy", "Python", "SQL", "RBAC", "MCP"],
+      "stack": [
+        "FastAPI",
+        "SQLAlchemy",
+        "Python",
+        "SQL",
+        "RBAC",
+        "MCP"
+      ],
       "highlights": [
         "Tenant-isolated architecture with resource:action:scope permission model",
         "Config-driven policy engine — attendance & overtime rules change without code",
@@ -149,7 +189,13 @@
       "name": "Polymarket Intelligence Engine",
       "category": "AI Agents · Quant Research",
       "description": "A multi-agent research and signal system for prediction markets — LLM reasoning agents layered over quantitative data pipelines to surface mispriced markets and edge calculations.",
-      "stack": ["Python", "LLM Agents", "MCP", "Kelly Criterion", "Market Data APIs"],
+      "stack": [
+        "Python",
+        "LLM Agents",
+        "MCP",
+        "Kelly Criterion",
+        "Market Data APIs"
+      ],
       "highlights": [
         "Agent orchestration layer coordinating research, scoring & risk agents",
         "Edge and bankroll-sizing calculations grounded in real market data",
@@ -163,7 +209,12 @@
       "name": "Jarvis OS",
       "category": "Personal AI Orchestration",
       "description": "A personal multi-agent operating layer that coordinates specialized AI agents across engineering, research and automation tasks — the workbench behind most of the work on this page.",
-      "stack": ["Multi-Agent Systems", "MCP", "Workflow Automation", "Tooling"],
+      "stack": [
+        "Multi-Agent Systems",
+        "MCP",
+        "Workflow Automation",
+        "Tooling"
+      ],
       "highlights": [
         "Specialist agents dispatched by task type rather than one generalist",
         "Reusable automation patterns across data, code & research workflows"
@@ -172,31 +223,100 @@
     }
   ],
   "certifications": [
-    { "name": "Career Essentials in Data Analysis", "issuer": "Microsoft & LinkedIn" },
-    { "name": "AWS Academy Cloud Foundations", "issuer": "AWS Academy Graduate" },
-    { "name": "Data Analytics & Visualization Job Simulation", "issuer": "Accenture North America" },
-    { "name": "Introduction to Data Science", "issuer": "Certification" },
-    { "name": "Prompt Design in Vertex AI", "issuer": "Google Cloud Skill Badge" }
+    {
+      "name": "Career Essentials in Data Analysis",
+      "issuer": "Microsoft & LinkedIn"
+    },
+    {
+      "name": "AWS Academy Cloud Foundations",
+      "issuer": "AWS Academy Graduate"
+    },
+    {
+      "name": "Data Analytics & Visualization Job Simulation",
+      "issuer": "Accenture North America"
+    },
+    {
+      "name": "Introduction to Data Science",
+      "issuer": "Certification"
+    },
+    {
+      "name": "Prompt Design in Vertex AI",
+      "issuer": "Google Cloud Skill Badge"
+    }
   ],
   "navLinks": [
-    { "href": "#about", "label": "About", "index": "01" },
-    { "href": "#experience", "label": "Experience", "index": "02" },
-    { "href": "#work", "label": "Work", "index": "03" },
-    { "href": "#skills", "label": "Skills", "index": "04" },
-    { "href": "#writing", "label": "Writing", "index": "05" },
-    { "href": "#contact", "label": "Contact", "index": "06" }
+    {
+      "href": "#about",
+      "label": "About",
+      "index": "01"
+    },
+    {
+      "href": "#experience",
+      "label": "Experience",
+      "index": "02"
+    },
+    {
+      "href": "#work",
+      "label": "Work",
+      "index": "03"
+    },
+    {
+      "href": "#skills",
+      "label": "Skills",
+      "index": "04"
+    },
+    {
+      "href": "#writing",
+      "label": "Writing",
+      "index": "05"
+    },
+    {
+      "href": "#contact",
+      "label": "Contact",
+      "index": "06"
+    }
   ],
   "socials": [
-    { "id": "s1", "label": "LinkedIn", "value": "/in/vaibhav-yadav-2vy", "url": "https://www.linkedin.com/in/vaibhav-yadav-2vy", "icon": "linkedin" },
-    { "id": "s2", "label": "Linktree", "value": "linktr.ee/Vaibhav25Y", "url": "https://linktr.ee/Vaibhav25Y", "icon": "link" }
+    {
+      "id": "s1",
+      "label": "LinkedIn",
+      "value": "/in/vaibhav-yadav-2vy",
+      "url": "https://www.linkedin.com/in/vaibhav-yadav-2vy",
+      "icon": "linkedin"
+    },
+    {
+      "id": "s2",
+      "label": "Linktree",
+      "value": "linktr.ee/Vaibhav25Y",
+      "url": "https://linktr.ee/Vaibhav25Y",
+      "icon": "link"
+    }
   ],
   "posts": [],
   "headings": {
-    "about": { "kicker": "Profile", "title": "About the builder" },
-    "experience": { "kicker": "Track record", "title": "Where I've worked" },
-    "work": { "kicker": "Selected work", "title": "Systems I've built" },
-    "skills": { "kicker": "Capability", "title": "Stack & tools" },
-    "writing": { "kicker": "Beyond the day job", "title": "Writing & vlogs" },
-    "contact": { "kicker": "Let's talk", "title": "Have a system worth building?" }
+    "about": {
+      "kicker": "Profile",
+      "title": "About the builder"
+    },
+    "experience": {
+      "kicker": "Track record",
+      "title": "Where I've worked"
+    },
+    "work": {
+      "kicker": "Selected work",
+      "title": "Systems I've built"
+    },
+    "skills": {
+      "kicker": "Capability",
+      "title": "Stack & tools"
+    },
+    "writing": {
+      "kicker": "Beyond the day job",
+      "title": "Writing & vlogs"
+    },
+    "contact": {
+      "kicker": "Let's talk",
+      "title": "Have a system worth building?"
+    }
   }
 }
