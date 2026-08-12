@@ -56,6 +56,7 @@ export default function Hero() {
               aspect="aspect-square"
               className="h-20 w-20 shrink-0 md:h-28 md:w-28"
               alwaysShow
+              rounded
               emptyLabel="Add photo"
             />
 
