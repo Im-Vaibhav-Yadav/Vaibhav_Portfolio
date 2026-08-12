@@ -46,26 +46,26 @@ body {
 
 [contenteditable="true"]:empty::before {
   content: attr(data-placeholder);
-  color: #8c9698;
+  color: #9aa0a6;
 }
 
 ::selection {
-  background: #c8ff24;
-  color: #050606;
+  background: #7c3aed;
+  color: #f5f6f8;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #050606;
+  background: #f5f6f8;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border: 2px solid #050606;
+  background: rgba(11, 13, 16, 0.15);
+  border: 2px solid #f5f6f8;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c8ff24;
+  background: #7c3aed;
 }
 
 .noise::before {
@@ -74,36 +74,36 @@ body {
   inset: 0;
   z-index: 60;
   pointer-events: none;
-  opacity: 0.025;
-  mix-blend-mode: overlay;
+  opacity: 0.02;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(241, 239, 232, 0.35);
+  -webkit-text-stroke: 1px rgba(11, 13, 16, 0.25);
 }
 
 .bg-grid {
   background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(11, 13, 16, 0.05) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(11, 13, 16, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
-/* Bright lime grid layer, revealed only in a soft radius around the
+/* Bright violet grid layer, revealed only in a soft radius around the
    cursor via a radial-gradient mask bound to --mx/--my. Skipped
    entirely on touch devices and under reduced-motion. */
 .bg-grid-interactive {
   background-image: linear-gradient(
       to right,
-      rgba(200, 255, 36, 0.5) 1px,
+      rgba(124, 58, 237, 0.45) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(200, 255, 36, 0.5) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(124, 58, 237, 0.45) 1px, transparent 1px);
   background-size: 48px 48px;
   -webkit-mask-image: radial-gradient(
     260px 260px at var(--mx) var(--my),
@@ -130,7 +130,7 @@ body {
   inset: 0;
   background: radial-gradient(
     480px 480px at var(--mx) var(--my),
-    rgba(200, 255, 36, 0.05),
+    rgba(124, 58, 237, 0.07),
     transparent 70%
   );
   transition: opacity 0.4s ease;
@@ -162,7 +162,7 @@ body {
   position: absolute;
   width: 14px;
   height: 14px;
-  border-color: #c8ff24;
+  border-color: #7c3aed;
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -186,8 +186,8 @@ body {
 .grain-card {
   background: linear-gradient(
     155deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.01)
+    rgba(11, 13, 16, 0.035),
+    rgba(11, 13, 16, 0.005)
   );
 }
 
@@ -196,8 +196,8 @@ body {
    (e.g. text-[--domain-ai]) if ever needed, and so future theme edits
    are one-line changes. */
 :root {
-  --domain-product: #c8ff24;
-  --domain-data: #d8c69a;
-  --domain-ai: #8ea7ff;
-  --domain-systems: #b89562;
+  --domain-product: #7c3aed;
+  --domain-data: #ea580c;
+  --domain-ai: #0ea5e9;
+  --domain-systems: #db2777;
 }

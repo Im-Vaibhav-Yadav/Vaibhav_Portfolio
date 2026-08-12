@@ -1,6 +1,7 @@
 export interface Profile {
   name: string;
   initials: string;
+  photo: string;
   role: string;
   roleSecondary: string;
   location: string;

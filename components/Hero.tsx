@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, MapPin } from "lucide-react";
 import { useContent } from "@/lib/content-store";
 import Editable from "./edit/Editable";
+import EditableImage from "./edit/EditableImage";
 import MagneticButton from "./MagneticButton";
 import { DOMAIN_BG, DOMAIN_TEXT, type Domain } from "@/lib/domain-colors";
 
@@ -46,6 +47,16 @@ export default function Hero() {
         className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-12 lg:grid-cols-[1.5fr_auto]"
       >
         <div>
+          {(profile.photo || editing) && (
+            <motion.div variants={item} className="mb-6">
+              <EditableImage
+                path="profile.photo"
+                aspect="aspect-square"
+                className="h-24 w-24 md:h-28 md:w-28"
+              />
+            </motion.div>
+          )}
+
           <motion.div
             variants={item}
             className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-haze"
