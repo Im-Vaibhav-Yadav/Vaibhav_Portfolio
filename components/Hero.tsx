@@ -58,6 +58,9 @@ export default function Hero() {
               alwaysShow
               rounded
               emptyLabel="Add photo"
+              zoomPath="profile.photoZoom"
+              xPath="profile.photoX"
+              yPath="profile.photoY"
             />
 
             <div className="min-w-0">

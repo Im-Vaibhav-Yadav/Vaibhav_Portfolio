@@ -2,10 +2,13 @@
   "profile": {
     "name": "Vaibhav Yadav",
     "initials": "VY",
-    "photo": "/uploads/1786533716646-whatsapp-image-2026-08-12-at-4-42-52-pm.jpeg",
+    "photo": "/uploads/1786534238471-whatsapp-image-2026-08-12-at-5-00-08-pm.jpeg",
+    "photoZoom": 1,
+    "photoX": 50,
+    "photoY": 50,
     "resumeUrl": "/resume.pdf",
     "role": "Associate Product Implementation Consultant",
-    "roleSecondary": "SaaS Implementation · BI & Analytics · AI Agents",
+    "roleSecondary": "AI Agents . SaaS Implementation · BI & Analytics ",
     "location": "Gurugram, Haryana, India",
     "email": "vaibhav518yadav@gmail.com",
     "phone": "+91 76680 24141",
@@ -18,10 +21,22 @@
     ]
   },
   "stats": [
-    { "value": "1.1+", "label": "Years in enterprise SaaS implementation" },
-    { "value": "2", "label": "Platforms implemented — Keka HRMS & Happay" },
-    { "value": "6+", "label": "Certifications across AI, cloud & data" },
-    { "value": "BI / SQL / AI Agents", "label": "Daily stack" }
+    {
+      "value": "1.1+",
+      "label": "Years in enterprise SaaS implementation"
+    },
+    {
+      "value": "2",
+      "label": "Platforms implemented — Keka HRMS & Happay"
+    },
+    {
+      "value": "6+",
+      "label": "Certifications across AI, cloud & data"
+    },
+    {
+      "value": "AI Agents / BI / SQL",
+      "label": "Daily stack"
+    }
   ],
   "experience": [
     {
@@ -39,10 +54,26 @@
         "Build Python-based reporting tools and interactive dashboards layered on top of implementation data for real-time insight."
       ],
       "tags": [
-        { "label": "Keka HRMS", "domain": "product" },
-        { "label": "Happay", "domain": "product" },
-        { "label": "SQL", "domain": "data" },
-        { "label": "Power BI", "domain": "data" }
+        {
+          "label": "Keka HRMS",
+          "domain": "product"
+        },
+        {
+          "label": "Happay",
+          "domain": "product"
+        },
+        {
+          "label": "SQL",
+          "domain": "data"
+        },
+        {
+          "label": "Power BI",
+          "domain": "data"
+        },
+        {
+          "label": "System",
+          "domain": "ai"
+        }
       ]
     },
     {
@@ -55,7 +86,12 @@
         "Supported requirements gathering and stakeholder reporting across active client engagements.",
         "Translated business needs into structured documentation to speed up delivery handoffs."
       ],
-      "tags": [{ "label": "Business Analysis", "domain": "product" }]
+      "tags": [
+        {
+          "label": "Business Analysis",
+          "domain": "product"
+        }
+      ]
     }
   ],
   "education": {
@@ -64,9 +100,9 @@
     "period": "Aug 2021 — Jul 2025"
   },
   "focusAreas": [
-    "Product & SaaS implementation",
+    "AI, GenAI & workflow automation",
     "Data analytics & business intelligence",
-    "AI, GenAI & workflow automation"
+    "Product & SaaS implementation"
   ],
   "skillGroups": [
     {
@@ -86,7 +122,14 @@
       "id": "02",
       "title": "Data Analytics & BI",
       "domain": "data",
-      "items": ["Power BI", "SQL", "DAX", "Power Query (M)", "Excel", "Python"]
+      "items": [
+        "Power BI",
+        "SQL",
+        "DAX",
+        "Power Query (M)",
+        "Excel",
+        "Python"
+      ]
     },
     {
       "id": "03",
@@ -105,13 +148,21 @@
       "id": "04",
       "title": "Cloud & Platforms",
       "domain": "systems",
-      "items": ["AWS Cloud Foundations", "Google BigQuery", "Vertex AI"]
+      "items": [
+        "AWS Cloud Foundations",
+        "Google BigQuery",
+        "Vertex AI"
+      ]
     },
     {
       "id": "05",
       "title": "Engineering Foundations",
       "domain": "systems",
-      "items": ["SCADA Systems", "Autodesk Suite", "Electrical Systems Design"]
+      "items": [
+        "SCADA Systems",
+        "Autodesk Suite",
+        "Electrical Systems Design"
+      ]
     }
   ],
   "skillTicker": [
@@ -137,7 +188,13 @@
       "domain": "data",
       "buildType": "client",
       "description": "An executive Power BI dashboard built for 7H Hospitality in Perth, Scotland — integrating Microsoft Business Central data into a single model covering financial and operational performance across the portfolio.",
-      "stack": ["Power BI", "DAX", "Power Query (M)", "SQL", "Business Central"],
+      "stack": [
+        "Power BI",
+        "DAX",
+        "Power Query (M)",
+        "SQL",
+        "Business Central"
+      ],
       "highlights": [
         "KPI coverage across Revenue, Occupancy, ADR & RevPAR",
         "P&L and Budget vs. Actual reporting built for finance stakeholders",
@@ -153,7 +210,14 @@
       "domain": "systems",
       "buildType": "independent",
       "description": "A production-grade HR Management System built from scratch as an independent engineering exercise, separate from client implementation work — multi-tenant by design, with a generic RBAC engine, a configurable policy engine, and a reusable approval-workflow engine driving leave, onboarding and offboarding.",
-      "stack": ["FastAPI", "SQLAlchemy", "Python", "SQL", "RBAC", "MCP"],
+      "stack": [
+        "FastAPI",
+        "SQLAlchemy",
+        "Python",
+        "SQL",
+        "RBAC",
+        "MCP"
+      ],
       "highlights": [
         "Tenant-isolated architecture with resource:action:scope permission model",
         "Config-driven policy engine — attendance & overtime rules change without code",
@@ -169,7 +233,13 @@
       "domain": "ai",
       "buildType": "experimental",
       "description": "A multi-agent research and signal system for prediction markets — LLM reasoning agents layered over quantitative data pipelines to surface mispriced markets and edge calculations.",
-      "stack": ["Python", "LLM Agents", "MCP", "Kelly Criterion", "Market Data APIs"],
+      "stack": [
+        "Python",
+        "LLM Agents",
+        "MCP",
+        "Kelly Criterion",
+        "Market Data APIs"
+      ],
       "highlights": [
         "Agent orchestration layer coordinating research, scoring & risk agents",
         "Edge and bankroll-sizing calculations grounded in real market data",
@@ -185,7 +255,12 @@
       "domain": "ai",
       "buildType": "experimental",
       "description": "A personal multi-agent operating layer that coordinates specialized AI agents across engineering, research and automation tasks — the workbench behind most of the work on this page.",
-      "stack": ["Multi-Agent Systems", "MCP", "Workflow Automation", "Tooling"],
+      "stack": [
+        "Multi-Agent Systems",
+        "MCP",
+        "Workflow Automation",
+        "Tooling"
+      ],
       "highlights": [
         "Specialist agents dispatched by task type rather than one generalist",
         "Reusable automation patterns across data, code & research workflows"
@@ -194,31 +269,105 @@
     }
   ],
   "certifications": [
-    { "name": "Career Essentials in Data Analysis", "issuer": "Microsoft & LinkedIn", "url": "" },
-    { "name": "AWS Academy Cloud Foundations", "issuer": "AWS Academy Graduate", "url": "" },
-    { "name": "Data Analytics & Visualization Job Simulation", "issuer": "Accenture North America", "url": "" },
-    { "name": "Introduction to Data Science", "issuer": "Certification", "url": "" },
-    { "name": "Prompt Design in Vertex AI", "issuer": "Google Cloud Skill Badge", "url": "" }
+    {
+      "name": "Career Essentials in Data Analysis",
+      "issuer": "Microsoft & LinkedIn",
+      "url": ""
+    },
+    {
+      "name": "AWS Academy Cloud Foundations",
+      "issuer": "AWS Academy Graduate",
+      "url": ""
+    },
+    {
+      "name": "Data Analytics & Visualization Job Simulation",
+      "issuer": "Accenture North America",
+      "url": ""
+    },
+    {
+      "name": "Introduction to Data Science",
+      "issuer": "Certification",
+      "url": ""
+    },
+    {
+      "name": "Prompt Design in Vertex AI",
+      "issuer": "Google Cloud Skill Badge",
+      "url": ""
+    }
   ],
   "navLinks": [
-    { "href": "#about", "label": "About", "index": "01" },
-    { "href": "#experience", "label": "Experience", "index": "02" },
-    { "href": "#work", "label": "Work", "index": "03" },
-    { "href": "#skills", "label": "Skills", "index": "04" },
-    { "href": "#writing", "label": "Writing", "index": "05" },
-    { "href": "#contact", "label": "Contact", "index": "06" }
+    {
+      "href": "#about",
+      "label": "About",
+      "index": "01"
+    },
+    {
+      "href": "#experience",
+      "label": "Experience",
+      "index": "02"
+    },
+    {
+      "href": "#work",
+      "label": "Work",
+      "index": "03"
+    },
+    {
+      "href": "#skills",
+      "label": "Skills",
+      "index": "04"
+    },
+    {
+      "href": "#writing",
+      "label": "Writing",
+      "index": "05"
+    },
+    {
+      "href": "#contact",
+      "label": "Contact",
+      "index": "06"
+    }
   ],
   "socials": [
-    { "id": "s1", "label": "LinkedIn", "value": "/in/vaibhav-yadav-2vy", "url": "https://www.linkedin.com/in/vaibhav-yadav-2vy", "icon": "linkedin" },
-    { "id": "s2", "label": "Linktree", "value": "linktr.ee/Vaibhav25Y", "url": "https://linktr.ee/Vaibhav25Y", "icon": "link" }
+    {
+      "id": "s1",
+      "label": "LinkedIn",
+      "value": "/in/vaibhav-yadav-2vy",
+      "url": "https://www.linkedin.com/in/vaibhav-yadav-2vy",
+      "icon": "linkedin"
+    },
+    {
+      "id": "s2",
+      "label": "Linktree",
+      "value": "linktr.ee/Vaibhav25Y",
+      "url": "https://linktr.ee/Vaibhav25Y",
+      "icon": "link"
+    }
   ],
   "posts": [],
   "headings": {
-    "about": { "kicker": "Profile", "title": "About the builder" },
-    "experience": { "kicker": "Track record", "title": "Where I've worked" },
-    "work": { "kicker": "Selected work", "title": "Systems I've built" },
-    "skills": { "kicker": "Capability", "title": "Stack & tools" },
-    "writing": { "kicker": "Beyond the day job", "title": "Field notes" },
-    "contact": { "kicker": "Let's talk", "title": "Have a system worth building?" }
+    "about": {
+      "kicker": "",
+      "title": "Profile"
+    },
+    "experience": {
+      "kicker": "Track record",
+      "title": "Where I've worked"
+    },
+    "work": {
+      "kicker": "Selected work",
+      "title": "Systems I've built"
+    },
+    "skills": {
+      "kicker": "Capability",
+      "title": "Stack & tools"
+    },
+    "writing": {
+      "kicker": "Beyond the day job",
+      "title": "Field notes"
+    },
+    "contact": {
+      "kicker": "Let's talk",
+      "title": "Have a system worth building?"
+    }
   }
 }

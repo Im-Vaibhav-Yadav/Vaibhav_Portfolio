@@ -2,6 +2,11 @@ export interface Profile {
   name: string;
   initials: string;
   photo: string;
+  /** 1 = fit frame, up to 3 = zoomed in 3x. */
+  photoZoom: number;
+  /** Object-position percentages (0-100) — where the frame is centered. */
+  photoX: number;
+  photoY: number;
   resumeUrl: string;
   role: string;
   roleSecondary: string;
