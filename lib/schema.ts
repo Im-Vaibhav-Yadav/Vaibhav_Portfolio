@@ -105,6 +105,13 @@ export interface Headings {
   contact: SectionHeadingCopy;
 }
 
+export interface ContactFormConfig {
+  /** Free access key from web3forms.com — safe to expose client-side,
+   *  that's how the service is designed to work. Empty = form falls
+   *  back to opening the visitor's mail client instead. */
+  accessKey: string;
+}
+
 export interface SiteContent {
   profile: Profile;
   stats: Stat[];
@@ -119,6 +126,7 @@ export interface SiteContent {
   socials: SocialLink[];
   posts: Post[];
   headings: Headings;
+  contactForm: ContactFormConfig;
 }
 
 /** How a project should be labeled — never presented as more than it is. */

@@ -11,12 +11,16 @@ export default function MagneticButton({
   children,
   className = "",
   cursorLabel,
+  type = "button",
+  disabled,
 }: {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
   className?: string;
   cursorLabel?: string;
+  type?: "button" | "submit";
+  disabled?: boolean;
 }) {
   const anchorRef = useRef<HTMLAnchorElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -68,13 +72,15 @@ export default function MagneticButton({
   return (
     <motion.button
       ref={buttonRef}
+      type={type}
+      disabled={disabled}
       onClick={onClick}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       data-cursor-hover
       data-cursor-label={cursorLabel}
       style={{ x: springX, y: springY }}
-      className={sharedClassName}
+      className={`${sharedClassName} disabled:cursor-not-allowed disabled:opacity-50`}
     >
       {children}
     </motion.button>
