@@ -60,7 +60,7 @@ export interface Project {
   description: string;
   stack: string[];
   highlights: string[];
-  image: string;
+  images: string[];
 }
 
 export interface Certification {

@@ -6,7 +6,7 @@ import { Plus, Trash2 } from "lucide-react";
 import { useContent } from "@/lib/content-store";
 import Editable from "./edit/Editable";
 import EditableList from "./edit/EditableList";
-import EditableImage from "./edit/EditableImage";
+import ImageCarousel from "./edit/ImageCarousel";
 import SectionHeading from "./SectionHeading";
 import {
   DOMAIN_TEXT,
@@ -32,7 +32,7 @@ const BLANK_PROJECT = {
   description: "What this project does and why it matters.",
   stack: ["Tech"],
   highlights: ["Key highlight"],
-  image: "",
+  images: [],
 };
 
 export default function Projects() {
@@ -183,9 +183,9 @@ export default function Projects() {
                       )}
                       <div className="grid grid-cols-1 gap-8 pb-10 pl-12 md:grid-cols-[1.3fr_1fr] md:pl-16">
                         <div className="max-w-xl">
-                          {(p.image || editing) && (
-                            <EditableImage
-                              path={`projects.${i}.image`}
+                          {(p.images?.length > 0 || editing) && (
+                            <ImageCarousel
+                              path={`projects.${i}.images`}
                               className="mb-6 w-full"
                             />
                           )}

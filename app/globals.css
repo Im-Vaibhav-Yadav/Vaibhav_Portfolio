@@ -41,26 +41,26 @@ body {
 
 [contenteditable="true"]:empty::before {
   content: attr(data-placeholder);
-  color: #a79876;
+  color: #8f7f5c;
 }
 
 ::selection {
-  background: #c1502e;
-  color: #f8f3e8;
+  background: #bb431f;
+  color: #f6eeda;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #efe6d6;
+  background: #e2d3b0;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(34, 28, 20, 0.18);
-  border: 2px solid #efe6d6;
+  background: rgba(28, 22, 15, 0.22);
+  border: 2px solid #e2d3b0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c1502e;
+  background: #bb431f;
 }
 
 .noise::before {
@@ -76,7 +76,7 @@ body {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(34, 28, 20, 0.28);
+  -webkit-text-stroke: 1px rgba(28, 22, 15, 0.32);
 }
 
 .mask-fade-x {
@@ -109,7 +109,7 @@ body {
   position: absolute;
   width: 16px;
   height: 16px;
-  border-color: #c1502e;
+  border-color: #bb431f;
   opacity: 0.4;
   transition: opacity 0.2s ease;
 }
@@ -130,26 +130,26 @@ body {
   opacity: 1;
 }
 .corner-frame:hover {
-  box-shadow: 5px 5px 0 0 rgba(34, 28, 20, 0.9);
+  box-shadow: 5px 5px 0 0 rgba(28, 22, 15, 0.92);
   transform: translate(-2px, -2px);
 }
 
 /* Hard, unblurred offset shadow — the "sturdy" signature applied to
    primary CTAs and key anchors instead of a soft drop shadow. */
 .edge-shadow {
-  box-shadow: 4px 4px 0 0 #221c14;
+  box-shadow: 4px 4px 0 0 #1c160f;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 .edge-shadow:hover {
-  box-shadow: 6px 6px 0 0 #221c14;
+  box-shadow: 6px 6px 0 0 #1c160f;
   transform: translate(-2px, -2px);
 }
 
 .grain-card {
   background: linear-gradient(
     155deg,
-    rgba(34, 28, 20, 0.04),
-    rgba(34, 28, 20, 0.008)
+    rgba(28, 22, 15, 0.05),
+    rgba(28, 22, 15, 0.01)
   );
 }
 
@@ -158,8 +158,8 @@ body {
    (e.g. text-[--domain-ai]) if ever needed, and so future theme edits
    are one-line changes. */
 :root {
-  --domain-product: #c1502e;
-  --domain-data: #0f766e;
-  --domain-ai: #4338ca;
-  --domain-systems: #b45309;
+  --domain-product: #bb431f;
+  --domain-data: #0c6b60;
+  --domain-ai: #3730a3;
+  --domain-systems: #9c4907;
 }

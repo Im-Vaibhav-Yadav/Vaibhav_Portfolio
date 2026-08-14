@@ -12,24 +12,25 @@ const config: Config = {
         // "ink" = page background, "paper" = primary text — names kept
         // stable across theme passes so component classNames never need
         // touching; only the hex values change here.
-        ink: "#efe6d6",
-        panel: "#f8f3e8",
-        paper: "#221c14",
-        haze: "#7c7059",
-        muted: "#a79876",
-        // Bumped up from the earlier soft-editorial pass — sharper,
-        // more defined structural lines for a sturdier feel.
-        line: "rgba(34,28,20,0.22)",
-        hairline: "rgba(34,28,20,0.09)",
+        // Deepened from the original pale-beige pass — the page was
+        // reading as washed out, so background/panel got richer and
+        // every accent got more saturated for real pop.
+        ink: "#e2d3b0",
+        panel: "#f6eeda",
+        paper: "#1c160f",
+        haze: "#6b5f45",
+        muted: "#8f7f5c",
+        line: "rgba(28,22,15,0.30)",
+        hairline: "rgba(28,22,15,0.11)",
         // Primary brand accent — terracotta against warm beige, used
         // pervasively (CTAs, cursor, links, hover states).
-        acid: "#c1502e",
+        acid: "#bb431f",
         // Domain accents — one per capability area, used consistently as
         // tags/dots/borders rather than backgrounds, so four hues stay
         // legible instead of noisy.
-        champagne: "#0f766e",
-        gold: "#b45309",
-        electric: "#4338ca",
+        champagne: "#0c6b60",
+        gold: "#9c4907",
+        electric: "#3730a3",
         // Destructive/remove affordance in edit mode — deliberately not
         // one of the brand/domain colors.
         amber: "#dc2626",

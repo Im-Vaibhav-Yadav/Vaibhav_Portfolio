@@ -200,7 +200,7 @@
         "P&L and Budget vs. Actual reporting built for finance stakeholders",
         "Business Central integration unifying operational + financial data into one verified model"
       ],
-      "image": ""
+      "images": []
     },
     {
       "id": "02",
@@ -223,7 +223,7 @@
         "Config-driven policy engine — attendance & overtime rules change without code",
         "MCP integrations wiring HR workflows into Notion, Linear & Atlassian"
       ],
-      "image": ""
+      "images": []
     },
     {
       "id": "03",
@@ -245,7 +245,7 @@
         "Edge and bankroll-sizing calculations grounded in real market data",
         "Iterated through multiple architecture versions toward a production build"
       ],
-      "image": ""
+      "images": []
     },
     {
       "id": "04",
@@ -265,7 +265,7 @@
         "Specialist agents dispatched by task type rather than one generalist",
         "Reusable automation patterns across data, code & research workflows"
       ],
-      "image": ""
+      "images": []
     }
   ],
   "certifications": [
