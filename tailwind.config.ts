@@ -12,28 +12,29 @@ const config: Config = {
         // "ink" = page background, "paper" = primary text — names kept
         // stable across theme passes so component classNames never need
         // touching; only the hex values change here.
-        // Deepened from the original pale-beige pass — the page was
-        // reading as washed out, so background/panel got richer and
-        // every accent got more saturated for real pop.
-        ink: "#e2d3b0",
-        panel: "#f6eeda",
-        paper: "#1c160f",
-        haze: "#6b5f45",
-        muted: "#8f7f5c",
-        line: "rgba(28,22,15,0.30)",
-        hairline: "rgba(28,22,15,0.11)",
-        // Primary brand accent — terracotta against warm beige, used
+        // Full repositioning away from the beige/editorial look toward a
+        // minimal, near-black engineering-tool aesthetic (Linear/Vercel/
+        // Stripe-docs register): one restrained accent, no textures or
+        // hard shadows, contrast and typography doing the work.
+        ink: "#0a0a0c",
+        panel: "#141417",
+        paper: "#f2f2f0",
+        haze: "#9a9aa4",
+        muted: "#6b6b74",
+        line: "rgba(242,242,240,0.14)",
+        hairline: "rgba(242,242,240,0.07)",
+        // Primary brand accent — a single restrained indigo, used
         // pervasively (CTAs, cursor, links, hover states).
-        acid: "#bb431f",
+        acid: "#6366f1",
         // Domain accents — one per capability area, used consistently as
         // tags/dots/borders rather than backgrounds, so four hues stay
         // legible instead of noisy.
-        champagne: "#0c6b60",
-        gold: "#9c4907",
-        electric: "#3730a3",
+        champagne: "#2dd4bf",
+        gold: "#fb923c",
+        electric: "#a78bfa",
         // Destructive/remove affordance in edit mode — deliberately not
         // one of the brand/domain colors.
-        amber: "#dc2626",
+        amber: "#ef4444",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

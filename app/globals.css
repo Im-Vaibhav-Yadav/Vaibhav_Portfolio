@@ -41,26 +41,26 @@ body {
 
 [contenteditable="true"]:empty::before {
   content: attr(data-placeholder);
-  color: #8f7f5c;
+  color: #6b6b74;
 }
 
 ::selection {
-  background: #bb431f;
-  color: #f6eeda;
+  background: #6366f1;
+  color: #f2f2f0;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #e2d3b0;
+  background: #0a0a0c;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(28, 22, 15, 0.22);
-  border: 2px solid #e2d3b0;
+  background: rgba(242, 242, 240, 0.14);
+  border: 2px solid #0a0a0c;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #bb431f;
+  background: #6366f1;
 }
 
 .noise::before {
@@ -70,13 +70,13 @@ body {
   z-index: 60;
   pointer-events: none;
   opacity: 0.025;
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(28, 22, 15, 0.32);
+  -webkit-text-stroke: 1px rgba(242, 242, 240, 0.28);
 }
 
 .mask-fade-x {
@@ -96,60 +96,35 @@ body {
   );
 }
 
-/* Sturdy, always-visible corner brackets that snap to full strength
-   and pick up a hard (non-blurred) offset shadow on hover — a
-   deliberately blocky, structural touch rather than a soft glow. */
+/* Quiet elevation on hover — a hairline border brightens and the
+   surface lifts on a soft, low shadow. No brackets, no offset blocks. */
 .corner-frame {
   position: relative;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.corner-frame::before,
-.corner-frame::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-color: #bb431f;
-  opacity: 0.4;
-  transition: opacity 0.2s ease;
-}
-.corner-frame::before {
-  top: -2px;
-  left: -2px;
-  border-top: 3px solid;
-  border-left: 3px solid;
-}
-.corner-frame::after {
-  bottom: -2px;
-  right: -2px;
-  border-bottom: 3px solid;
-  border-right: 3px solid;
-}
-.corner-frame:hover::before,
-.corner-frame:hover::after {
-  opacity: 1;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 .corner-frame:hover {
-  box-shadow: 5px 5px 0 0 rgba(28, 22, 15, 0.92);
-  transform: translate(-2px, -2px);
+  border-color: rgba(242, 242, 240, 0.3);
+  box-shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.65);
+  transform: translateY(-2px);
 }
 
-/* Hard, unblurred offset shadow — the "sturdy" signature applied to
-   primary CTAs and key anchors instead of a soft drop shadow. */
+/* Soft accent glow used on primary CTAs and key anchors instead of a
+   drop shadow — restrained, not decorative. */
 .edge-shadow {
-  box-shadow: 4px 4px 0 0 #1c160f;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 1px 0 0 rgba(242, 242, 240, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .edge-shadow:hover {
-  box-shadow: 6px 6px 0 0 #1c160f;
-  transform: translate(-2px, -2px);
+  box-shadow: 0 8px 28px -6px rgba(99, 102, 241, 0.45);
+  transform: translateY(-1px);
 }
 
 .grain-card {
   background: linear-gradient(
     155deg,
-    rgba(28, 22, 15, 0.05),
-    rgba(28, 22, 15, 0.01)
+    rgba(242, 242, 240, 0.04),
+    rgba(242, 242, 240, 0.01)
   );
 }
 
@@ -158,8 +133,8 @@ body {
    (e.g. text-[--domain-ai]) if ever needed, and so future theme edits
    are one-line changes. */
 :root {
-  --domain-product: #bb431f;
-  --domain-data: #0c6b60;
-  --domain-ai: #3730a3;
-  --domain-systems: #9c4907;
+  --domain-product: #6366f1;
+  --domain-data: #2dd4bf;
+  --domain-ai: #a78bfa;
+  --domain-systems: #fb923c;
 }
