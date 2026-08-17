@@ -45,8 +45,8 @@ body {
 }
 
 ::selection {
-  background: #6366f1;
-  color: #f2f2f0;
+  background: #76b900;
+  color: #0a0a0c;
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +60,7 @@ body {
   border: 2px solid #0a0a0c;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+  background: #76b900;
 }
 
 .noise::before {
@@ -116,7 +116,7 @@ body {
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .edge-shadow:hover {
-  box-shadow: 0 8px 28px -6px rgba(99, 102, 241, 0.45);
+  box-shadow: 0 8px 28px -6px rgba(118, 185, 0, 0.45);
   transform: translateY(-1px);
 }
 
@@ -133,7 +133,7 @@ body {
    (e.g. text-[--domain-ai]) if ever needed, and so future theme edits
    are one-line changes. */
 :root {
-  --domain-product: #6366f1;
+  --domain-product: #76b900;
   --domain-data: #2dd4bf;
   --domain-ai: #a78bfa;
   --domain-systems: #fb923c;

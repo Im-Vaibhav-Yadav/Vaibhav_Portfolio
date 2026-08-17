@@ -23,9 +23,9 @@ const config: Config = {
         muted: "#6b6b74",
         line: "rgba(242,242,240,0.14)",
         hairline: "rgba(242,242,240,0.07)",
-        // Primary brand accent — a single restrained indigo, used
+        // Primary brand accent — NVIDIA-style signature green, used
         // pervasively (CTAs, cursor, links, hover states).
-        acid: "#6366f1",
+        acid: "#76b900",
         // Domain accents — one per capability area, used consistently as
         // tags/dots/borders rather than backgrounds, so four hues stay
         // legible instead of noisy.
