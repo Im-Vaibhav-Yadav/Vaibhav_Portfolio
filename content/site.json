@@ -206,6 +206,48 @@
     },
     {
       "id": "02",
+      "year": "2025",
+      "name": "Dabur Dubai (UAE) — Happay Implementation",
+      "category": "Happay Expense Management · Client Implementation",
+      "domain": "product",
+      "buildType": "client",
+      "description": "End-to-end Happay Expense Management implementation for Dabur's UAE finance operations — configuring expense policy, approval workflows and organizational hierarchy for enterprise-wide rollout.",
+      "stack": [
+        "Happay",
+        "Expense Policy Config",
+        "Data Migration",
+        "UAT"
+      ],
+      "highlights": [
+        "Configured expense policies, approval workflows, reimbursement processes and organizational hierarchy for enterprise finance operations",
+        "Performed finance master-data migration, validation and reconciliation ahead of go-live",
+        "Supported UAT and resolved implementation issues through go-live and stabilization"
+      ],
+      "images": []
+    },
+    {
+      "id": "03",
+      "year": "2025",
+      "name": "Keka HRMS Implementation — The Souled Store & UniSeoul",
+      "category": "Keka HRMS · Client Implementation",
+      "domain": "product",
+      "buildType": "client",
+      "description": "Keka HRMS implementations for The Souled Store (India) and UniSeoul — configuring payroll, attendance, leave and employee-lifecycle workflows from requirement gathering through go-live.",
+      "stack": [
+        "Keka HRMS",
+        "Payroll & Attendance",
+        "Data Migration",
+        "UAT & Training"
+      ],
+      "highlights": [
+        "Conducted business-requirement analysis and configured HR workflows to each client's operating model",
+        "Supported payroll, attendance, leave management and employee-lifecycle implementation",
+        "Managed employee data migration and validation, and led UAT, training and post-go-live support"
+      ],
+      "images": []
+    },
+    {
+      "id": "04",
       "year": "2026",
       "name": "7H Hospitality — Executive BI Suite",
       "category": "Power BI · Business Intelligence",
@@ -227,7 +269,48 @@
       "images": []
     },
     {
-      "id": "03",
+      "id": "05",
+      "year": "2025",
+      "name": "HR Analytics Dashboard",
+      "category": "Power BI · Workforce Analytics",
+      "domain": "data",
+      "buildType": "client",
+      "description": "An HR analytics dashboard covering employee demographics, attendance and leave utilization — turning workforce data into decision-ready visuals for HR stakeholders.",
+      "stack": [
+        "Power BI",
+        "SQL",
+        "Excel"
+      ],
+      "highlights": [
+        "Built interactive visualizations and KPI reports covering demographics, attendance and leave utilization",
+        "Automated HR reporting end-to-end using SQL and Power BI in place of manual spreadsheets",
+        "Delivered decision-support views used directly by HR stakeholders"
+      ],
+      "images": []
+    },
+    {
+      "id": "06",
+      "year": "2025",
+      "name": "AI Document Intelligence System",
+      "category": "Computer Vision · Document AI",
+      "domain": "ai",
+      "buildType": "independent",
+      "description": "An intelligent document-processing pipeline combining object detection and OCR to automate document localization and text extraction from scanned documents.",
+      "stack": [
+        "Python",
+        "OpenCV",
+        "Faster R-CNN",
+        "EasyOCR"
+      ],
+      "highlights": [
+        "Implemented Faster R-CNN for document localization and EasyOCR for text extraction",
+        "Automated preprocessing and structured information extraction from scanned documents",
+        "Improved document-processing efficiency through end-to-end AI-powered automation"
+      ],
+      "images": []
+    },
+    {
+      "id": "07",
       "year": "2025",
       "name": "Multi-Tenant HRMS Platform",
       "category": "Independent Build · Backend Architecture",
@@ -250,7 +333,7 @@
       "images": []
     },
     {
-      "id": "04",
+      "id": "08",
       "year": "2025",
       "name": "Polymarket Intelligence Engine",
       "category": "AI Agents · Quant Research",
@@ -272,7 +355,7 @@
       "images": []
     },
     {
-      "id": "05",
+      "id": "09",
       "year": "2025",
       "name": "Jarvis OS",
       "category": "Personal AI Orchestration",
