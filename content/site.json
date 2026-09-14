@@ -206,22 +206,23 @@
     },
     {
       "id": "02",
-      "year": "2025",
-      "name": "Dabur Dubai (UAE) — Happay Implementation",
-      "category": "Happay Expense Management · Client Implementation",
-      "domain": "product",
+      "year": "2026",
+      "name": "7H Hospitality — Executive BI Suite",
+      "category": "Power BI · Business Intelligence",
+      "domain": "data",
       "buildType": "client",
-      "description": "End-to-end Happay Expense Management implementation for Dabur's UAE finance operations — configuring expense policy, approval workflows and organizational hierarchy for enterprise-wide rollout.",
+      "description": "An executive Power BI dashboard built for 7H Hospitality in Perth, Scotland — integrating Microsoft Business Central data into a single model covering financial and operational performance across the portfolio.",
       "stack": [
-        "Happay",
-        "Expense Policy Config",
-        "Data Migration",
-        "UAT"
+        "Power BI",
+        "DAX",
+        "Power Query (M)",
+        "SQL",
+        "Business Central"
       ],
       "highlights": [
-        "Configured expense policies, approval workflows, reimbursement processes and organizational hierarchy for enterprise finance operations",
-        "Performed finance master-data migration, validation and reconciliation ahead of go-live",
-        "Supported UAT and resolved implementation issues through go-live and stabilization"
+        "KPI coverage across Revenue, Occupancy, ADR & RevPAR",
+        "P&L and Budget vs. Actual reporting built for finance stakeholders",
+        "Business Central integration unifying operational + financial data into one verified model"
       ],
       "images": []
     },
@@ -248,23 +249,22 @@
     },
     {
       "id": "04",
-      "year": "2026",
-      "name": "7H Hospitality — Executive BI Suite",
-      "category": "Power BI · Business Intelligence",
-      "domain": "data",
+      "year": "2025",
+      "name": "Dabur Dubai (UAE) — Happay Implementation",
+      "category": "Happay Expense Management · Client Implementation",
+      "domain": "product",
       "buildType": "client",
-      "description": "An executive Power BI dashboard built for 7H Hospitality in Perth, Scotland — integrating Microsoft Business Central data into a single model covering financial and operational performance across the portfolio.",
+      "description": "End-to-end Happay Expense Management implementation for Dabur's UAE finance operations — configuring expense policy, approval workflows and organizational hierarchy for enterprise-wide rollout.",
       "stack": [
-        "Power BI",
-        "DAX",
-        "Power Query (M)",
-        "SQL",
-        "Business Central"
+        "Happay",
+        "Expense Policy Config",
+        "Data Migration",
+        "UAT"
       ],
       "highlights": [
-        "KPI coverage across Revenue, Occupancy, ADR & RevPAR",
-        "P&L and Budget vs. Actual reporting built for finance stakeholders",
-        "Business Central integration unifying operational + financial data into one verified model"
+        "Configured expense policies, approval workflows, reimbursement processes and organizational hierarchy for enterprise finance operations",
+        "Performed finance master-data migration, validation and reconciliation ahead of go-live",
+        "Supported UAT and resolved implementation issues through go-live and stabilization"
       ],
       "images": []
     },
