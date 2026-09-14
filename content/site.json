@@ -40,39 +40,6 @@
   ],
   "experience": [
     {
-      "company": "Shipsy.io — Reliance Retail",
-      "role": "WMS Implementation & Functional Implementation Specialist",
-      "period": "2026 — Present",
-      "location": "Reliance Corporate Park, Mumbai",
-      "tag": "current",
-      "points": [
-        "Implementing Shipsy WMS (Stockone) across 34 DC-to-DC stores for Reliance Retail's Value Retail / SMART format, covering inbound, GRN, putaway, inventory, picking, replenishment and outbound operations.",
-        "Work directly with business and warehouse teams to translate existing operational processes into WMS workflows and configurations.",
-        "Extending the implementation into semi-automated and automated warehouse operations, supporting the shift from conventional to technology-driven processes.",
-        "Act as the bridge between the WMS product/implementation team and client warehouse stakeholders — process walkthroughs, functional clarification and issue resolution.",
-        "Provide UAT support, go-live support and hypercare across multiple distribution centres, including user enablement and troubleshooting.",
-        "Identify process gaps and translate business requirements into practical WMS configuration changes."
-      ],
-      "tags": [
-        {
-          "label": "Shipsy WMS",
-          "domain": "product"
-        },
-        {
-          "label": "Multi-DC Ops",
-          "domain": "systems"
-        },
-        {
-          "label": "Warehouse Automation",
-          "domain": "systems"
-        },
-        {
-          "label": "UAT & Hypercare",
-          "domain": "product"
-        }
-      ]
-    },
-    {
       "company": "EngiNeo Solutions",
       "role": "Associate Product Implementation Consultant",
       "period": "Aug 2025 — Present",
@@ -84,7 +51,8 @@
         "Own data migration and SQL validation end-to-end, guaranteeing accurate, reliable data at go-live.",
         "Coordinate UAT cycles and stakeholder collaboration across business and technical teams through sign-off.",
         "Provide post-go-live support — stabilizing systems, resolving issues, and keeping clients live after handover.",
-        "Build Python-based reporting tools and interactive dashboards layered on top of implementation data for real-time insight."
+        "Build Python-based reporting tools and interactive dashboards layered on top of implementation data for real-time insight.",
+        "Part of EngiNeo's collaboration with Shipsy.io, implementing the Shipsy WMS for Reliance Retail — extending the practice from HRMS/Finance into warehouse operations."
       ],
       "tags": [
         {
@@ -96,16 +64,16 @@
           "domain": "product"
         },
         {
+          "label": "Shipsy WMS",
+          "domain": "product"
+        },
+        {
           "label": "SQL",
           "domain": "data"
         },
         {
           "label": "Power BI",
           "domain": "data"
-        },
-        {
-          "label": "System",
-          "domain": "ai"
         }
       ]
     },
@@ -218,6 +186,27 @@
     {
       "id": "01",
       "year": "2026",
+      "name": "Shipsy WMS Implementation — Reliance Retail",
+      "category": "Warehouse Management System · Client Implementation",
+      "domain": "product",
+      "buildType": "client",
+      "description": "Through EngiNeo Solutions' collaboration with Shipsy.io, implementing the Shipsy WMS (Stockone) for Reliance Retail's Value Retail / SMART format — translating warehouse operations into WMS workflows and configuration across 34 DC-to-DC stores.",
+      "stack": [
+        "Shipsy WMS (Stockone)",
+        "Warehouse Operations",
+        "Process Configuration",
+        "UAT & Hypercare"
+      ],
+      "highlights": [
+        "Implementation spans 34 DC-to-DC stores — inbound, GRN, putaway, inventory, picking, replenishment and outbound",
+        "Extending the rollout into semi-automated and automated warehouse operations",
+        "Functional bridge between the WMS implementation team and client warehouse stakeholders through UAT, go-live and hypercare"
+      ],
+      "images": []
+    },
+    {
+      "id": "02",
+      "year": "2026",
       "name": "7H Hospitality — Executive BI Suite",
       "category": "Power BI · Business Intelligence",
       "domain": "data",
@@ -238,7 +227,7 @@
       "images": []
     },
     {
-      "id": "02",
+      "id": "03",
       "year": "2025",
       "name": "Multi-Tenant HRMS Platform",
       "category": "Independent Build · Backend Architecture",
@@ -261,7 +250,7 @@
       "images": []
     },
     {
-      "id": "03",
+      "id": "04",
       "year": "2025",
       "name": "Polymarket Intelligence Engine",
       "category": "AI Agents · Quant Research",
@@ -283,7 +272,7 @@
       "images": []
     },
     {
-      "id": "04",
+      "id": "05",
       "year": "2025",
       "name": "Jarvis OS",
       "category": "Personal AI Orchestration",
