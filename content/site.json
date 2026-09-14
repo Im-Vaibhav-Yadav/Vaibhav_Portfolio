@@ -26,8 +26,8 @@
       "label": "Years in enterprise SaaS implementation"
     },
     {
-      "value": "2",
-      "label": "Platforms implemented — Keka HRMS & Happay"
+      "value": "3",
+      "label": "Platforms implemented — Keka HRMS, Happay & Shipsy WMS"
     },
     {
       "value": "6+",
@@ -39,6 +39,39 @@
     }
   ],
   "experience": [
+    {
+      "company": "Shipsy.io — Reliance Retail",
+      "role": "WMS Implementation & Functional Implementation Specialist",
+      "period": "2026 — Present",
+      "location": "Reliance Corporate Park, Mumbai",
+      "tag": "current",
+      "points": [
+        "Implementing Shipsy WMS (Stockone) across 34 DC-to-DC stores for Reliance Retail's Value Retail / SMART format, covering inbound, GRN, putaway, inventory, picking, replenishment and outbound operations.",
+        "Work directly with business and warehouse teams to translate existing operational processes into WMS workflows and configurations.",
+        "Extending the implementation into semi-automated and automated warehouse operations, supporting the shift from conventional to technology-driven processes.",
+        "Act as the bridge between the WMS product/implementation team and client warehouse stakeholders — process walkthroughs, functional clarification and issue resolution.",
+        "Provide UAT support, go-live support and hypercare across multiple distribution centres, including user enablement and troubleshooting.",
+        "Identify process gaps and translate business requirements into practical WMS configuration changes."
+      ],
+      "tags": [
+        {
+          "label": "Shipsy WMS",
+          "domain": "product"
+        },
+        {
+          "label": "Multi-DC Ops",
+          "domain": "systems"
+        },
+        {
+          "label": "Warehouse Automation",
+          "domain": "systems"
+        },
+        {
+          "label": "UAT & Hypercare",
+          "domain": "product"
+        }
+      ]
+    },
     {
       "company": "EngiNeo Solutions",
       "role": "Associate Product Implementation Consultant",
@@ -115,7 +148,8 @@
         "Product Configuration",
         "UAT & Stakeholder Mgmt",
         "Keka HRMS",
-        "Happay Expense Mgmt"
+        "Happay Expense Mgmt",
+        "Shipsy WMS"
       ]
     },
     {
@@ -168,6 +202,7 @@
   "skillTicker": [
     "KEKA HRMS",
     "HAPPAY",
+    "SHIPSY WMS",
     "POWER BI",
     "DAX",
     "POWER QUERY",
